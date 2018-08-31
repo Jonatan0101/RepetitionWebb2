@@ -29,20 +29,25 @@
                 Synthetic Vision, and much more. The Line Replaceable Units (LRU’s) are located in a dedicated and externally accessible
                 forward avionics bay, for ease of maintenance and trouble shooting.</p>
         </div>
-        <div class="part2 flex">
+        <div class="part1 flex">
             <img src="img/DA62_25.png" alt="">
             <p>The turbocharged Austro AE330 jet fuel piston engines perfectly match the DA62’s aerodynamically efficient airframe, burning
-            only 17.1 gph, combined, at a high speed cruise of 192 ktas, and little as 9 gph at max endurance speed.</p>
-            <p>The 3 blade MT hydraulic constant speed propellers feature advanced blade geometry for efficient performance, smoothness
+            only 17.1 gph, combined, at a high speed cruise of 192 ktas, and little as 9 gph at max endurance speed. The 3 blade MT hydraulic constant speed propellers feature advanced blade geometry for efficient performance, smoothness
             and low noise. They are automatically controlled by each engine’s digital engine control through conventional hydraulic governors.
             Feathering is as simple as flipping a single switch.</p>
+            <button id="modal-open">Click Here To Order</button>
         </div>
-        <div class="part3 flex">
-            <button class="footplane"><img src="img/DA62_8.png" alt=""></button>
+        <div class="part1 flex">
+            <button id="footplane"><img src="img/DA62_8.png" alt="">CLICK HERE</button>
             
         </div>
         
     </section>
+    <div class="modal hidden">
+        <h2>Grattis! Beställning skickas snart.</h2>
+        <img id="loading-icon" src="img/loading.gif">
+        <a  class="hidden" id="track-link" href="#">Tryck här för att följa din order.</a>
+    </div>
 
     <script src="app.js"></script>
 </body>

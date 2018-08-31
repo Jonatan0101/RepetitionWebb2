@@ -14,57 +14,102 @@ body {
 .top {
     background: url('img/top.png') no-repeat center top;
 }
-.nav {
-    padding: 2rem;
-    font-size: 3rem;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
 
-.nav > * {
+/* .nav > * {
     text-align: center;
     color: rgb(114, 114, 114);
     text-decoration: none;
     width: 25rem;
-}
+} */
 .section-top h1 {
     font-size: 4rem;
 }
 .section-top p {
-    font-size: 2rem;
-    margin: 5%;
+    font-size: 1.6rem;
+    margin: 5% 15%;
 }
 .section-top img {
     width: 100%;
 }
 
-button {
+#footplane {
     border: none;
+    padding: 1rem;
+}
+
+.part1 #modal-open{
+    background-color: #f0f0f0;
+    border: #f0f0f0 solid 4px;
+    bottom: 0%;
+    transform: translate(50%, -50%);
+    padding: 0.7rem;
+    width: 50%; 
+    font-size: 1.3rem;
+}
+#modal-open:hover {
+    transition-duration: 0.2s;
+    border: rgb(138, 138, 138) solid 2px;
 }
 
 
+.hidden {
+    display: none;
+}
 
+/* MODAL*/
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(47, 63, 114);
+
+    text-align: center;
+}
+.modal h2{
+    margin: 1rem;
+}
+.modal img{
+    width: 2rem;
+}
+.modal a {
+    color: #f0f0f0;
+    font-size: 2rem;
+}
+.modal a:hover{
+
+}
+
+/* Media Queries för dator*/
 @media screen and (min-width: 800px) {
     .flex{
         display: flex;
         flex-direction: column;
     }
 
-
+    .section-top p {
+    font-size: 2rem;
+    margin: 5% 15%;
+    }
 
     .section-top h1{
         text-align: center;
         margin: 3rem;
     }
-    .part1, .part2 img {
+    .part1 img {
         width: 70%;
         height: auto;
         margin: 0 auto;
     }
 
 
+}
+
+@keyframes modalUp {
+    0%{
+        
+    }
 }
