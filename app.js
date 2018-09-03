@@ -1,37 +1,27 @@
+// Skapar konstanter för att använda senare
 const html = document.querySelector('html');
-const footPlane = document.querySelector('#footplane');
 
 const modalOpen = document.querySelector('#modal-open');
 const modal = document.querySelector('.modal');
 const loading = document.querySelector('#loading-icon');
 const trackLink = document.querySelector('#track-link');
 
-var isZoomed = false;
 
-var modalShow = false;
 
-footPlane.addEventListener('click', function(){
-    if (isZoomed){
-        html.style.transform = 'scale(1)';
-        modalOpen.classList.remove("hidden");
-        isZoomed = false;
-    } else {
-        html.style.transform = 'scale(0.5)';
-        modalOpen.classList.add("hidden");
-        isZoomed = true;
-    }
+var modalShow;
 
-});
+//Tar fram när man trycker på knappen
 console.log(modalShow);
 modalOpen.addEventListener('click', function(){
-    if (modalShow = true) {
-        
+    if (modalShow = true) { // Om det fungerar ska detta alltid hända
+        html.style.cursor = 'wait';
         modal.classList.remove('hidden');
         modalShow = true;
-        setTimeout(function(){
+        setTimeout(function(){ // Fördröjer denna kod med 3.5 sekunder för att det ska verka som att något händer i bakgrunden
             loading.classList.add('hidden');
             trackLink.classList.remove('hidden');
-        }, 3000);
+            html.style.cursor = 'default';
+        }, 3500);
     } else {
         console.log(':(')
     }

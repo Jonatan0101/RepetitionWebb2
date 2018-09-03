@@ -16,12 +16,7 @@ body {
 }
 
 
-/* .nav > * {
-    text-align: center;
-    color: rgb(114, 114, 114);
-    text-decoration: none;
-    width: 25rem;
-} */
+
 .section-top h1 {
     font-size: 4rem;
 }
@@ -33,33 +28,32 @@ body {
     width: 100%;
 }
 
-#footplane {
-    border: none;
-    padding: 1rem;
-}
+
 
 .part1 #modal-open{
     background-color: #f0f0f0;
     border: #f0f0f0 solid 4px;
-    bottom: 0%;
-    transform: translate(50%, -50%);
+    transform: translate(50%, 0%);
     padding: 0.7rem;
+    margin: 1rem;
     width: 50%; 
     font-size: 1.3rem;
 }
 #modal-open:hover {
     transition-duration: 0.2s;
     border: rgb(138, 138, 138) solid 2px;
+    cursor: pointer;
 }
 
-
+/* Klass som kan användas vid behov*/ 
 .hidden {
     display: none;
 }
 
-/* MODAL*/
+/* Modal som kommer när man tryckt på beställ*/
 
 .modal {
+    animation: revealModal 1s;
     position: fixed;
     width: 100%;
     height: 80%;
@@ -80,7 +74,8 @@ body {
     font-size: 2rem;
 }
 .modal a:hover{
-
+    transition-duration: .3s;
+    opacity: .6;
 }
 
 /* Media Queries för dator*/
@@ -107,9 +102,15 @@ body {
 
 
 }
-
-@keyframes modalUp {
+ /* Keyframe för att ta fram meddelandet på ett finare sätt*/
+@keyframes revealModal {
     0%{
+        transform: scale(0);
+        opacity: 0.4;
         
+    }
+    100%{
+        transform:  scale(1);
+        opacity: 1;
     }
 }
